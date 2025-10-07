@@ -1,32 +1,85 @@
+# 🧮 Commission Calculator — Technical Assessment
 
-# Technical Task:
+> Finish and ship a production-quality Commission Calculator for **Avalpha Technologies**.  
+> The API and React app are scaffolded; the controller exists but the logic & wiring are incomplete **by design**.
 
-You are finishing implementing a Commission Calculator.
+---
 
-There is an API in place and a react application.
-The controller is created but the code is unfinished.
+## 🚀 What you’ll build
 
-Your job is to finish the technical task:
- - Connect the backend and frontend
- - Implement the calculation in the C# controller
+- Connect **frontend (React)** ↔ **backend (C#/.NET)**  
+- Implement commission calculations in the C# controller  
+- Deliver clean, production-ready code (tests, structure, readability)
 
-Develop this at **production quality**.
+⏱ **Timebox:** up to **4 hours max**. Be pragmatic. Prioritize correctness, clarity, and the essentials.
 
-The code is imcomplete on purpose, it's a simulation of how most work is done, good luck:
+---
 
-# Business rules
+## 🔀 Before you start (Fork + Setup)
 
- At Avalpha Technologies, we pay 20% commission for Local Sales and 35% commission on Foreign Sales.
- Our competitons only pay 2% commission and 7.55% on Foreign Sales.
+1. **Fork** this repository into your own GitHub account.  
+2. **Clone** your fork locally.  
+3. Work in a feature branch, e.g. `feat/commission-impl`.  
+4. When done, push to your fork and open a **Pull Request** back to your fork’s `main`.  
+   - Add a short **README-notes.md** describing decisions, trade-offs, and anything unfinished.  
+5. Share your fork/PR link with us.
 
-Example:
-- Local Sales count: 10
-- Foreign Sales Count: 10
-- Averaga Sales Amount: £100
+> ✅ We want to see how you think, structure, and ****. Small, meaningful commits > one giant commit.
 
-Avalpha Technologies Commission: £550
-    Local Sales Commission = 20% * 10 sales * 100 average sale
-    Foreign Sales Commission = 35% * 10 sales * 100 average sales
-Competitor Commission: £95.5
-    Local Sales Commission = 2% * 10 sales * 100 average sale
-    Foreign Sales Commission = 7.55% * 10 sales * 100 average sales
+---
+
+## 🧠 Business Rules
+
+At **Avalpha Technologies**:
+- **Local Sales Commission:** **20%**
+- **Foreign Sales Commission:** **35%**
+
+Competitors pay:
+- **Local:** **2%**
+- **Foreign:** **7.55%**
+
+**Inputs:**
+- `localSalesCount` (number)  
+- `foreignSalesCount` (number)  
+- `averageSaleAmount` (currency/number)  
+
+**Output (example):**
+
+Local Sales count: 10
+Foreign Sales count: 10
+Average Sales Amount: £100
+
+Avalpha Commission:
+
+Local = 20% * 10 * 100 = £200
+
+Foreign = 35% * 10 * 100 = £350
+
+Total = £550
+
+Competitor Commission:
+
+Local = 2% * 10 * 100 = £20
+
+Foreign = 7.55% * 10 * 100 = £75.5
+
+Total = £95.5
+
+## 🧩 Your Tasks (Checklist)
+
+- [ ] Wire up the **React frontend** to call the backend API  
+- [ ] Implement calculation logic 
+- [ ] Validate inputs (numbers ≥ 0, sensible upper bounds)  
+- [ ] Return a typed, well-structured response (DTO)  
+- [ ] Display results in the UI with clear labels and currency formatting  
+- [ ] Handle errors gracefully (backend & UI)  
+- [ ] Provide basic **docs**: how to run, how to test, decisions  
+- [ ] Keep commits small and messages clear  
+
+---
+
+## 🧱 Tech Stack
+
+- **Frontend:** React (Vite/CRA), TypeScript preferred (if scaffolded), Fetch/Axios OK  
+- **Backend:** .NET (C#), minimal API or MVC controller  
+- **Tests:** xUnit/NUnit + React Testing Library / Vitest/Jest  
